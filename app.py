@@ -12,8 +12,8 @@ def get_client():
                         authSource="admin")
     return client
 
-client=get_client()
-db = client["records_db"]
+#client=get_client()
+#db = client["records_db"]
 
 records = []
 
