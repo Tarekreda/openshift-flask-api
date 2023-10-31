@@ -20,7 +20,7 @@ records = []
 @app.route('/')          #the main index entry point to our app 
 
 def main():
-    return "hello, flask and mongo world"
+    return "hello world"
 
 
 
