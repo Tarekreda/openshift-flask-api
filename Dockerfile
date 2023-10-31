@@ -1,5 +1,5 @@
 # Inherit python image
-FROM python:3.6-slim
+FROM python:3.6
 
 # Set up directories
 RUN mkdir /application
@@ -19,4 +19,4 @@ EXPOSE 8080
 STOPSIGNAL SIGINT
 
 ENTRYPOINT ["python"]
-CMD ["flask_app.py"]
+CMD ["app.py"]
