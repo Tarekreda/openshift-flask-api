@@ -20,7 +20,7 @@ records = []
 @app.route('/')          #the main index entry point to our app 
 
 def main():
-    return "hello world"
+    return "hello"
 
 
 
