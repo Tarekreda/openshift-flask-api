@@ -34,10 +34,10 @@ def main():
 def get_records():
 
     try:
-        print(client.admin.command('ping'))
-    except ConnectionFailure:
-        print('Server not available')
-    return jsonify({"records": records})
+        log = client.admin.command('ping')
+    except:
+        log = 'Server not available'
+    return log
 
 
 @app.route('/records', methods=['POST'])
