@@ -5,7 +5,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 def get_client():
-    client = MongoClient('10.129.5.104',port=27017,username='adminuser', password='adminpass1234', authSource="records_db")
+    client = MongoClient('192.168.10.2',port=27017,username='adminuser', password='adminpass1234', authSource="records_db")
     return client
 
 
