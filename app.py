@@ -4,13 +4,19 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-def get_client():
+def get_client2():
     client = MongoClient(host='172.30.250.124',
                          port=27017, 
                          username='adminuser', 
                          password='adminpass1234',
                         authSource="admin")
     return client
+
+def get_client():
+    client = MongoClient("mongodb://adminuser:adminpass1234@172.30.250.124:27017")
+    return client
+
+
 
 client=get_client()
 db = client["records_db"]
