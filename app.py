@@ -16,7 +16,10 @@ def get_client():
 
 
 client=get_client()
-db = client["records_db"]
+#db = client["records_db"]
+#_records = db.records_tb.find()
+#records = [{"type": record["type"], "network": record["network"]} for record in _records]
+
 
 records = []
 
@@ -30,10 +33,10 @@ def main():
 @app.route('/records', methods=['GET'])  
 def get_records():
 
-
-    _records = db.records_tb.find()
-    records = [{"type": record["type"], "network": record["network"]} for record in _records]
-
+    try:
+        print(client.admin.command('ping'))
+    except ConnectionFailure:
+        print('Server not available')
     return jsonify({"records": records})
 
 
